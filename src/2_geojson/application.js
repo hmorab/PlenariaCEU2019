@@ -78,8 +78,22 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
                 duration: 3000
             });
         } });
+    var colombia = new IconButton_1.default({ title: "CO", action: function () {
+        var camera = new Camera({
+            "position": {
+                "x": -74.2973328,
+                "y": 4.570868,
+                "z": 900000
+            },
+            "heading": 0.509,
+            "tilt": 23.273
+        });
+        view.goTo(camera, {
+            duration: 3000
+        });
+    } });
     var quakeBookmark = new IconButton_1.default({
-        title: "Underground", action: function () {
+        title: "Subterránea UK", action: function () {
             scene.ground.navigationConstraint = {
                 type: "none"
             };
@@ -100,10 +114,31 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
             });
         }
     });
+    var quakeBookmarkCO = new IconButton_1.default({
+        title: "Subterránea CO", action: function () {
+            scene.ground.navigationConstraint = {
+                type: "none"
+            };
+            var camera = new Camera({
+                "position": {
+                    "x": -74.2973328,
+                    "y": 4.570868,
+                    "z": -44618.189062614925
+                },
+                "heading": 22.958547703630877,
+                "tilt": 95.36043529090966
+            });
+            view.goTo(camera, {
+                duration: 3000
+            });
+        }
+    });
     view.ui.add(zoom, "bottom-right");
     view.ui.add(home, "bottom-right");
     view.ui.add(quakeBookmark, "bottom-right");
+    view.ui.add(quakeBookmarkCO, "bottom-right");
     view.ui.add(alaska, "bottom-right");
+    view.ui.add(colombia, "bottom-right");
     view.ui.add(new Banner_1.default({ title: "GeoJSON" }));
     var $ = document.querySelector.bind(document);
     var expand1 = new Expand({

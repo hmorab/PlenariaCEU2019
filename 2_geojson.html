@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-  <title>GeoJSON</title>
+  <title>ArcGIS para Desarrolladores</title>
 
   <link rel="stylesheet" href="./src/2_geojson/application.css">
   <link rel="stylesheet" href="./src/widgets/Indicator.css">
@@ -25,21 +25,21 @@
 
   <div id="layerPanel" class="esri-widget application-panel" style="width: auto;">
     <fieldset>
-      <legend>Add GeoJSONLayer</legend>
+      <legend>Agregar GeoJSONLayer</legend>
       <div class="js-code">
         <div id="addGeoJSONLayerButton" class="run-button esri-widget esri-widget--button esri-icon-play" role="button"></div>
         <pre><code class="javascript">const url = &quot;https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson&quot;;
 
 const layer = new GeoJSONLayer({
   url,
-  title: &quot;USGS Earthquakes&quot;,
+  title: &quot;Sismos - Servicio Geológico de los Estados Unidos&quot;,
   copyright: &quot;USGS&quot;,
   definitionExpression: &quot;type = 'earthquake'&quot;,
   popupTemplate: {
     title: `{title}`,
     content: `
-      Earthquake of magnitude {mag} on {time}.&lt;br /&gt;
-      &lt;a href=&quot;{url}&quot; &gt;More details...&lt;/a&gt;
+      Sismo de magnitud {mag} el {time}.&lt;br /&gt;
+      &lt;a href=&quot;{url}&quot; &gt;Más detalles...&lt;/a&gt;
     `
   }
 });</code></pre>
@@ -49,7 +49,7 @@ const layer = new GeoJSONLayer({
 
   <div id="elevationPanel"  class="esri-widget application-panel">
     <fieldset>
-      <legend>Elevation</legend>
+      <legend>Elevación</legend>
       <div class="js-code">
         <div id="applyElevationInfoButton" class="run-button esri-widget esri-widget--button esri-icon-play" role="button"></div>
         <pre><code class="javascript">layer.elevationInfo = {
@@ -62,7 +62,7 @@ const layer = new GeoJSONLayer({
       </div>
     </fieldset>
     <fieldset>
-      <legend>Ground Opacity</legend>
+      <legend>Opacidad del suelo</legend>
       <div class="js-code">
         <pre><code id="groundOpacityCode" class="javascript">scene.ground.opacity = 1;</code></pre>
       </div>
@@ -72,7 +72,7 @@ const layer = new GeoJSONLayer({
 
   <div id="rendererPanel"  class="esri-widget application-panel">
     <fieldset>
-      <legend>Renderer</legend>
+      <legend>Renderizador</legend>
       <div class="js-code">
         <div id="applyRendererButton" class="run-button esri-widget esri-widget--button esri-icon-play" role="button"></div>
         <pre><code class="javascript">layer.renderer = new SimpleRenderer({
