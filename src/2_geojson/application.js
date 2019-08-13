@@ -82,11 +82,11 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
         var camera = new Camera({
             "position": {
                 "x": -74.2973328,
-                "y": 4.570868,
-                "z": 900000
+                "y": 0.570868,
+                "z": 1000000
             },
             "heading": 0.509,
-            "tilt": 23.273
+            "tilt": 37.076
         });
         view.goTo(camera, {
             duration: 3000
@@ -122,14 +122,14 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
             var camera = new Camera({
                 "position": {
                     "x": -74.2973328,
-                    "y": 4.570868,
-                    "z": -44618.189062614925
+                    "y": -1.570868,
+                    "z": -70000.189062614925
                 },
-                "heading": 22.958547703630877,
-                "tilt": 95.36043529090966
+                "heading": 0.509,
+                "tilt": 85.36043529090966
             });
             view.goTo(camera, {
-                duration: 3000
+                duration: 5000
             });
         }
     });
@@ -139,11 +139,11 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
     view.ui.add(quakeBookmarkCO, "bottom-right");
     view.ui.add(alaska, "bottom-right");
     view.ui.add(colombia, "bottom-right");
-    view.ui.add(new Banner_1.default({ title: "GeoJSON" }));
+    view.ui.add(new Banner_1.default({ title: "ArcGIS para Desarrolladores" }));
     var $ = document.querySelector.bind(document);
     var expand1 = new Expand({
         expandIconClass: "esri-icon-feature-layer",
-        expandTooltip: "Layer",
+        expandTooltip: "Capa",
         content: $("#layerPanel"),
         expanded: false,
         group: "group1",
@@ -151,7 +151,7 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
     });
     var expand2 = new Expand({
         expandIconClass: "esri-icon-globe",
-        expandTooltip: "Elevation",
+        expandTooltip: "Elevación",
         content: $("#elevationPanel"),
         expanded: false,
         group: "group1",
@@ -159,7 +159,7 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
     });
     var expand3 = new Expand({
         expandIconClass: "esri-icon-maps",
-        expandTooltip: "Renderer",
+        expandTooltip: "Renderizador",
         content: $("#rendererPanel"),
         expanded: false,
         group: "group1",
