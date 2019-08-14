@@ -93,7 +93,7 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
         });
     } });
     var quakeBookmark = new IconButton_1.default({
-        title: "Subterránea UK", action: function () {
+        title: "Subterránea AK", action: function () {
             scene.ground.navigationConstraint = {
                 type: "none"
             };
