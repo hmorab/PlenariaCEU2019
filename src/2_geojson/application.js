@@ -83,7 +83,7 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
             "position": {
                 "x": -74.123930,
                 "y": -5.642015,
-                "z": 1000000
+                "z": 2000000
             },
             "heading": 0.509,
             "tilt": 37.076
