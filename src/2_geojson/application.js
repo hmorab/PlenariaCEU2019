@@ -81,8 +81,8 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
     var ecuador = new IconButton_1.default({ title: "EC", action: function () {
         var camera = new Camera({
             "position": {
-                "x": -74.2973328,
-                "y": 0.570868,
+                "x": -74.871000,
+                "y": -4.920000,
                 "z": 1000000
             },
             "heading": 0.509,
