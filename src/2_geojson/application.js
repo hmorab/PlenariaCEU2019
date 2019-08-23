@@ -78,7 +78,7 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
                 duration: 3000
             });
         } });
-    var colombia = new IconButton_1.default({ title: "CO", action: function () {
+    var ecuador = new IconButton_1.default({ title: "EC", action: function () {
         var camera = new Camera({
             "position": {
                 "x": -74.2973328,
@@ -115,7 +115,7 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
         }
     });
     var quakeBookmarkCO = new IconButton_1.default({
-        title: "Subterránea CO", action: function () {
+        title: "Subterránea EC", action: function () {
             scene.ground.navigationConstraint = {
                 type: "none"
             };
@@ -138,7 +138,7 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
     view.ui.add(quakeBookmark, "bottom-right");
     view.ui.add(quakeBookmarkCO, "bottom-right");
     view.ui.add(alaska, "bottom-right");
-    view.ui.add(colombia, "bottom-right");
+    view.ui.add(ecuador, "bottom-right");
     view.ui.add(new Banner_1.default({ title: "ArcGIS para Desarrolladores" }));
     var $ = document.querySelector.bind(document);
     var expand1 = new Expand({
