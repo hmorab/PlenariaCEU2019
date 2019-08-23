@@ -82,7 +82,7 @@ define(["require", "exports", "esri/WebScene", "esri/views/SceneView", "esri/lay
         var camera = new Camera({
             "position": {
                 "x": -74.123930,
-                "y": -5.642015,
+                "y": -6.642015,
                 "z": 2000000
             },
             "heading": 0.509,
